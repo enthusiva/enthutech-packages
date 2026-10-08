@@ -541,7 +541,7 @@ do
 	esac
 
 	#Show LED status
-	# echo 1 > /sys/class/leds/dragino2\:red\:system/brightness GPIO28
+	# echo 1 > /sys/class/leds/enthutech2\:red\:system/brightness GPIO28
 	# LPS8:GPIO21: RED, GPIO28: Blue GLobal
 	# LGxx: GPIO21: N/A. GPIO28: RED Global
 	# LIG16: GPIO21(LOW): GREEN; GPIO28: RED; GPIO22(Low), RED
@@ -564,7 +564,7 @@ do
 	if [ $iot_online == 1 ]; then
 		# IoT Connection is ok
 		[ $is_lps8 = 1 ] && echo 0 > /sys/class/gpio/gpio21/value
-		echo 1 > /sys/class/leds/dragino2\:red\:system/brightness
+		echo 1 > /sys/class/leds/enthutech2\:red\:system/brightness
 		[ "$offline_flag" == "1" ] && offline_flag="0" && echo "`date`: switch to online" >> /var/status_log
 	elif [ $has_internet -eq 1 ]; then
 		# IoT Connection Fail, but Internet Up
@@ -580,7 +580,7 @@ do
 		fi
 	else
 		# IoT Connection Fail, Internet Down
-		echo 0 > /sys/class/leds/dragino2\:red\:system/brightness
+		echo 0 > /sys/class/leds/enthutech2\:red\:system/brightness
 		[ $is_lps8 == 1 ] && echo 1 > /sys/class/gpio/gpio21/value
 	fi
 

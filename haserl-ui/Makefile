@@ -19,14 +19,14 @@ include $(INCLUDE_DIR)/package.mk
 define Package/$(PKG_NAME)
   SECTION:=utils
   CATEGORY:=Utilities
-  TITLE:= Dragino loragateway web panel
+  TITLE:= Enthutech loragateway web panel
   DEPENDS:=+uhttpd-mod-lua
-  URL:=http://www.dragino.com
-  MAINTAINER:=Dragino <info@dragino.com>
+  URL:=http://www.enthutechaiot.com
+  MAINTAINER:=Enthutech <info@enthutechaiot.com>
 endef
 
 define Package/$(PKG_NAME)/description
-	dragino loragateway web panel
+	enthutech loragateway web panel
 endef
 
 define Build/Prepare
@@ -37,7 +37,7 @@ define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)/etc/iot
 	mkdir -p $(PKG_BUILD_DIR)/etc/iot/cert
 	mkdir -p $(PKG_BUILD_DIR)/etc/config
-	mkdir -p $(PKG_BUILD_DIR)/usr/lib//lua/dragino
+	mkdir -p $(PKG_BUILD_DIR)/usr/lib//lua/enthutech
 	mkdir -p $(PKG_BUILD_DIR)/www/cgi-bin/inc
 	mkdir -p $(PKG_BUILD_DIR)/www/static/img
 	mkdir -p $(PKG_BUILD_DIR)/www/static/resources/font-awesome/css

@@ -20,12 +20,12 @@ define Package/$(PKG_NAME)
   SECTION:=luci
   CATEGORY:=LuCI
   SUBMENU:=3. Applications
-  TITLE:= Dragino loragateway web panel
+  TITLE:= Enthutech loragateway web panel
   DEPENDS:=+luci +luci-lib-json +uhttpd-mod-lua
 endef
 
 define Package/$(PKG_NAME)/description
-	dragino loragateway web panel
+	enthutech loragateway web panel
 endef
 
 define Build/Prepare

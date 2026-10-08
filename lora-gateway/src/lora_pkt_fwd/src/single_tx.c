@@ -1,11 +1,11 @@
 /**
- * Author: Dragino 
+ * Author: Enthutech 
  * Date: 16/01/2018
  * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
- * http://www.dragino.com
+ * http://www.enthutechaiot.com
  *
  * 
 */
@@ -178,13 +178,13 @@ int main(int argc, char *argv[])
         char payload[256] = {'\0'};
 
         if (strlen(message) < 1)
-            strcpy(message, "HELLO DRAGINO");	
+            strcpy(message, "HELLO ENTHUTECH");	
 
         if (loop) {
                 /* configure signal handling */
             int sn = 0;
             while ( 1 ) {
-                snprintf(payload, sizeof(payload), "%d: HELLO DRAGINO ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ", sn);	
+                snprintf(payload, sizeof(payload), "%d: HELLO ENTHUTECH ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ", sn);	
                 single_tx(loradev, (uint8_t *)payload, strlen(payload));
                 ++sn;
                 sleep(1);

@@ -1,4 +1,4 @@
-APP_NAME:=dragino_lorawan_server
+APP_NAME:=enthutech_lorawan_server
 
 OBJDIR = obj
 

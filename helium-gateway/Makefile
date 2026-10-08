@@ -19,14 +19,14 @@ include $(INCLUDE_DIR)/package.mk
 define Package/$(PKG_NAME)
   SECTION:=utils
   CATEGORY:=Utilities
-  TITLE:= Dragino data-only hostpot
+  TITLE:= Enthutech data-only hostpot
   DEPENDS:=+uhttpd-mod-lua
-  URL:=http://www.dragino.com
-  MAINTAINER:=Dragino <support@dragino.com>
+  URL:=http://www.enthutechaiot.com
+  MAINTAINER:=Enthutech <support@enthutechaiot.com>
 endef
 
 define Package/$(PKG_NAME)/description
-	Dragino data-only hostpot
+	Enthutech data-only hostpot
 endef
 
 define Build/Prepare

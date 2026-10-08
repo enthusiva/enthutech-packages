@@ -1,11 +1,11 @@
 /**
- * Author: Dragino 
+ * Author: Enthutech 
  * Date: 16/01/2018
  * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
- * http://www.dragino.com
+ * http://www.enthutechaiot.com
  *
  * 
 */
@@ -499,7 +499,7 @@ int main(int argc, char *argv[])
     strcpy(serv_port_down, dwport);
 
     if (!get_config("general", email, 32)){
-        JSTRNCPY(email, "dragino@dragino.com");
+        JSTRNCPY(email, "enthutech@enthutechaiot.com");
         MSG_LOG(DEBUG_UCI, "UCIINFO~ get option email=%s\n", email);
     }
 

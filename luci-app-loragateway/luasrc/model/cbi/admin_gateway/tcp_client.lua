@@ -16,7 +16,7 @@ $Id: tcp_client.lua 5948 2010-03-27 14:54:06Z jow $
 ]]--
 
 
-local dragino_utility = require('dragino.utility')
+local enthutech_utility = require('enthutech.utility')
 local uci = luci.model.uci.cursor()
 
 local uart_channels = {}

@@ -11,7 +11,7 @@ define Package/$(PKG_NAME)
 	SECTION:=utils
 	CATEGORY:=Utilities
 	TITLE:=$(PKG_NAME)
-	MAINTAINER:=<support@dragino.com>
+	MAINTAINER:=<support@enthutechaiot.com>
 	DEPENDS:=+fping
 endef
 

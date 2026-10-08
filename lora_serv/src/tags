@@ -20,7 +20,7 @@ APPEND_STRING	src/parson.c	1096;"	d	file:
 APPEND_STRING	src/parson.c	867;"	d	file:
 APPKEYLEN	src/dls_utili.c	68;"	d	file:
 APPLICATION_SERVER	inc/handle.h	90;"	d
-APP_NAME	Makefile	/^APP_NAME:=dragino_lorawan_server$/;"	m
+APP_NAME	Makefile	/^APP_NAME:=enthutech_lorawan_server$/;"	m
 ARRAY_SIZE	src/base64.c	29;"	d	file:
 Ack	src/handle.c	/^        uint8_t Ack             : 1;$/;"	m	struct:uLoRaMacFrameCtrl::sCtrlBits	file:
 Adr	src/handle.c	/^        uint8_t Adr             : 1;$/;"	m	struct:uLoRaMacFrameCtrl::sCtrlBits	file:
@@ -64,26 +64,26 @@ DB_DLS_UTILI_H	inc/dls_utili.h	10;"	d
 DB_SQLITE3_H_	inc/db.h	10;"	d
 DEBUG	src/base64.c	33;"	d	file:
 DEBUG_BEACON	inc/trace.h	24;"	d
-DEBUG_DEBUG	src/dragino_lorawan_server.c	/^int DEBUG_DEBUG = 0;$/;"	v
+DEBUG_DEBUG	src/enthutech_lorawan_server.c	/^int DEBUG_DEBUG = 0;$/;"	v
 DEBUG_ERROR	inc/trace.h	29;"	d
 DEBUG_ERROR	src/dls_utili.c	73;"	d	file:
-DEBUG_ERROR	src/dragino_lorawan_server.c	/^int DEBUG_ERROR = 1;$/;"	v
+DEBUG_ERROR	src/enthutech_lorawan_server.c	/^int DEBUG_ERROR = 1;$/;"	v
 DEBUG_INFO	inc/trace.h	26;"	d
-DEBUG_INFO	src/dragino_lorawan_server.c	/^int DEBUG_INFO = 1;$/;"	v
+DEBUG_INFO	src/enthutech_lorawan_server.c	/^int DEBUG_INFO = 1;$/;"	v
 DEBUG_JIT	inc/trace.h	21;"	d
 DEBUG_JIT_ERROR	inc/trace.h	22;"	d
-DEBUG_JOIN	src/dragino_lorawan_server.c	/^int DEBUG_JOIN = 0;$/;"	v
+DEBUG_JOIN	src/enthutech_lorawan_server.c	/^int DEBUG_JOIN = 0;$/;"	v
 DEBUG_LOG	inc/trace.h	25;"	d
 DEBUG_PKT_FWD	inc/trace.h	20;"	d
 DEBUG_PPM	inc/trace.h	27;"	d
 DEBUG_SQL	src/dls_utili.c	72;"	d	file:
-DEBUG_SQL	src/dragino_lorawan_server.c	/^int DEBUG_SQL = 0;$/;"	v
+DEBUG_SQL	src/enthutech_lorawan_server.c	/^int DEBUG_SQL = 0;$/;"	v
 DEBUG_STMT	src/db.c	23;"	d	file:
 DEBUG_STMT	src/dls_utili.c	75;"	d	file:
 DEBUG_TIMERSYNC	inc/trace.h	23;"	d
-DEBUG_UPDW	src/dragino_lorawan_server.c	/^int DEBUG_UPDW = 0;$/;"	v
+DEBUG_UPDW	src/enthutech_lorawan_server.c	/^int DEBUG_UPDW = 0;$/;"	v
 DEBUG_WARNING	inc/trace.h	28;"	d
-DEBUG_WARNING	src/dragino_lorawan_server.c	/^int DEBUG_WARNING = 1;$/;"	v
+DEBUG_WARNING	src/enthutech_lorawan_server.c	/^int DEBUG_WARNING = 1;$/;"	v
 DOWN	src/handle.c	23;"	d	file:
 DPOLY	src/aes.c	77;"	d	file:
 Del	src/handle.c	/^		uint8_t Del              : 4;$/;"	m	struct:uLoRaMacRxDelay::sRxDBits	file:
@@ -314,7 +314,7 @@ capacity	src/parson.c	/^    size_t       capacity;$/;"	m	struct:json_object_t	fi
 chan	inc/handle.h	/^	uint8_t  chan;     \/*Concentrator "IF" channel used for RX (unsigned integer)*\/$/;"	m	struct:metadata
 char_to_code	src/base64.c	/^uint8_t char_to_code(char x) {$/;"	f
 cmd	inc/dls_utili.h	/^    uint8_t cmd;$/;"	m	struct:lw_t
-cntx	src/dragino_lorawan_server.c	/^struct context cntx = { '\\0' };	\/* sqlite3 database context *\/$/;"	v	typeref:struct:context
+cntx	src/enthutech_lorawan_server.c	/^struct context cntx = { '\\0' };	\/* sqlite3 database context *\/$/;"	v	typeref:struct:context
 code_62	src/base64.c	/^static char code_62 = '+';	\/* RFC 1421 standard character for code 62 *\/$/;"	v	file:
 code_63	src/base64.c	/^static char code_63 = '\/';	\/* RFC 1421 standard character for code 63 *\/$/;"	v	file:
 code_pad	src/base64.c	/^static char code_pad = '=';	\/* RFC 1421 padding character if padding *\/$/;"	v	file:
@@ -365,7 +365,7 @@ devnonce	inc/handle.h	/^    uint16_t devnonce;$/;"	m	struct:devinfo
 devnonce_hex	inc/handle.h	/^    char devnonce_hex[7];$/;"	m	struct:devinfo
 dwnb	inc/handle.h	/^    uint32_t dwnb;    \/*Number of downlink datagrams received (unsigned integer)*\/$/;"	m	struct:gwinfo
 eLoRaMacFrameType	src/handle.c	/^typedef enum eLoRaMacFrameType$/;"	g	file:
-exit_sig	src/dragino_lorawan_server.c	/^static bool exit_sig = false;$/;"	v	file:
+exit_sig	src/enthutech_lorawan_server.c	/^static bool exit_sig = false;$/;"	v	file:
 f1	src/aes.c	79;"	d	file:
 f2	src/aes.c	80;"	d	file:
 f3	src/aes.c	86;"	d	file:
@@ -403,7 +403,7 @@ gfmul_9	src/aes.c	/^static const uint_8t gfmul_9[256] = mm_data(f9);$/;"	v	file:
 gfmul_b	src/aes.c	/^static const uint_8t gfmul_b[256] = mm_data(fb);$/;"	v	file:
 gfmul_d	src/aes.c	/^static const uint_8t gfmul_d[256] = mm_data(fd);$/;"	v	file:
 gfmul_e	src/aes.c	/^static const uint_8t gfmul_e[256] = mm_data(fe);$/;"	v	file:
-gw_list	src/dragino_lorawan_server.c	/^static linked_list gw_list;$/;"	v	file:
+gw_list	src/enthutech_lorawan_server.c	/^static linked_list gw_list;$/;"	v	file:
 gwaddr	inc/handle.h	/^	char    gwaddr[16];$/;"	m	struct:metadata
 gwaddr	inc/handle.h	/^	char gwaddr[16];\/*gateway address*\/$/;"	m	struct:pkt_info
 gwaddr	inc/handle.h	/^	char*  gwaddr;$/;"	m	struct:msg_down
@@ -412,7 +412,7 @@ gweui	inc/handle.h	/^    char* gweui;$/;"	m	struct:gwinfo
 gweui_hex	inc/handle.h	/^	char gweui_hex[17];\/*gateway address*\/$/;"	m	struct:pkt_info
 gweui_hex	inc/handle.h	/^    char    gweui_hex[17];$/;"	m	struct:metadata
 gwinfo	inc/handle.h	/^struct gwinfo {$/;"	s
-gwserv	src/dragino_lorawan_server.c	/^static char gwserv[64] = "localhost";$/;"	v	file:
+gwserv	src/enthutech_lorawan_server.c	/^static char gwserv[64] = "localhost";$/;"	v	file:
 head	inc/generic_list.h	/^	struct Node* head;$/;"	m	struct:List	typeref:struct:List::Node
 hex_char_to_int	src/parson.c	/^static int hex_char_to_int(char c) {$/;"	f	file:
 hibit	src/aes.c	/^static uint_8t hibit(const uint_8t x)$/;"	f	file:
@@ -577,7 +577,7 @@ lookupprofile	inc/db.h	/^	sqlite3_stmt* lookupprofile; $/;"	m	struct:context
 lsnr	inc/handle.h	/^	float    lsnr;     \/*Lora SNR ratio in dB (signed float, 0.1 dB precision)*\/$/;"	m	struct:metadata
 lw_t	inc/dls_utili.h	/^struct lw_t {$/;"	s
 main	src/dls_utili.c	/^void main(int argc, char *argv[]) {$/;"	f
-main	src/dragino_lorawan_server.c	/^int main(int argc, char **argv) {$/;"	f
+main	src/enthutech_lorawan_server.c	/^int main(int argc, char **argv) {$/;"	f
 malloc	src/parson.c	53;"	d	file:
 memcpy1	src/utilities.c	/^void memcpy1( uint8_t *dst, const uint8_t *src, uint16_t size )$/;"	f
 memcpyr	src/utilities.c	/^void memcpyr( uint8_t *dst, const uint8_t *src, uint16_t size )$/;"	f
@@ -590,11 +590,11 @@ msg_down	inc/handle.h	/^    struct msg_down* msg_down;$/;"	m	struct:jsondata	typ
 msg_down	inc/handle.h	/^struct msg_down {$/;"	s
 msgdb	inc/db.h	/^    sqlite3* msgdb;$/;"	m	struct:context
 msgdb	inc/dls_utili.h	/^    sqlite3 *msgdb;$/;"	m	struct:lw_t
-mx_db	src/dragino_lorawan_server.c	/^static pthread_mutex_t mx_db = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
-mx_gw_list	src/dragino_lorawan_server.c	/^static pthread_mutex_t mx_gw_list = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
-mx_push	src/dragino_lorawan_server.c	/^static pthread_mutex_t mx_push = PTHREAD_MUTEX_INITIALIZER;	\/* control access to the push_data upstream measurements *\/$/;"	v	file:
+mx_db	src/enthutech_lorawan_server.c	/^static pthread_mutex_t mx_db = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+mx_gw_list	src/enthutech_lorawan_server.c	/^static pthread_mutex_t mx_gw_list = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+mx_push	src/enthutech_lorawan_server.c	/^static pthread_mutex_t mx_push = PTHREAD_MUTEX_INITIALIZER;	\/* control access to the push_data upstream measurements *\/$/;"	v	file:
 names	src/parson.c	/^    char       **names;$/;"	m	struct:json_object_t	file:
-nb_push_rcv	src/dragino_lorawan_server.c	/^static uint32_t nb_push_rcv = 0;	\/* count push_data packets received *\/$/;"	v	file:
+nb_push_rcv	src/enthutech_lorawan_server.c	/^static uint32_t nb_push_rcv = 0;	\/* count push_data packets received *\/$/;"	v	file:
 next	inc/generic_list.h	/^	struct Node* next;$/;"	m	struct:Node	typeref:struct:Node::Node
 next	src/handle.c	/^static uint32_t next = 1; $/;"	v	file:
 next	src/utilities.c	/^static uint32_t next = 1;$/;"	v	file:
@@ -631,9 +631,9 @@ pkt_payload	inc/handle.h	/^	uint8_t pkt_payload[BUFF_SIZE - 12];\/*packet payloa
 plist	inc/generic_list.h	/^}linked_list, *plist;$/;"	t	typeref:struct:List
 pnode	inc/generic_list.h	/^}list_node, *pnode;$/;"	t	typeref:struct:Node
 process_string	src/parson.c	/^static char* process_string(const char *input, size_t len) {$/;"	f	file:
-pull_port	src/dragino_lorawan_server.c	/^static char pull_port[16] = "1701";$/;"	v	file:
+pull_port	src/enthutech_lorawan_server.c	/^static char pull_port[16] = "1701";$/;"	v	file:
 pull_timeout	src/handle.c	/^static struct timeval pull_timeout = {0, (PULL_TIMEOUT_MS * 1000)}; \/* non critical for throughput *\/$/;"	v	typeref:struct:timeval	file:
-push_port	src/dragino_lorawan_server.c	/^static char push_port[16] = "1700";$/;"	v	file:
+push_port	src/enthutech_lorawan_server.c	/^static char push_port[16] = "1700";$/;"	v	file:
 push_timeout_half	src/handle.c	/^static struct timeval push_timeout_half = {0, (PUSH_TIMEOUT_MS * 500)}; \/* cut in half, critical for throughput *\/$/;"	v	typeref:struct:timeval	file:
 rand1	src/utilities.c	/^int32_t rand1( void )$/;"	f
 randr	src/utilities.c	/^int32_t randr( int32_t min, int32_t max )$/;"	f
@@ -663,11 +663,11 @@ serialize_msg_to_gw	src/handle.c	/^void serialize_msg_to_gw(const char* data, in
 set_timer	src/handle.c	/^void set_timer(int sec,int msec) {$/;"	f
 shift_sub_rows	src/aes.c	/^static void shift_sub_rows( uint_8t st[N_BLOCK] )$/;"	f	file:
 show_help	src/dls_utili.c	/^static void show_help() {$/;"	f	file:
-signal_handle	src/dragino_lorawan_server.c	/^void signal_handle(int signo) {$/;"	f
+signal_handle	src/enthutech_lorawan_server.c	/^void signal_handle(int signo) {$/;"	f
 size	inc/handle.h	/^	uint16_t size;     \/*RF packet payload size in bytes (unsigned integer)*\/$/;"	m	struct:metadata
 skip_quotes	src/parson.c	/^static JSON_Status skip_quotes(const char **string) {$/;"	f	file:
-sockfd_pull	src/dragino_lorawan_server.c	/^static int sockfd_pull;			\/*socket for downstream to gateway *\/$/;"	v	file:
-sockfd_push	src/dragino_lorawan_server.c	/^static int sockfd_push;			\/*socket for upstream from gateway *\/$/;"	v	file:
+sockfd_pull	src/enthutech_lorawan_server.c	/^static int sockfd_pull;			\/*socket for downstream to gateway *\/$/;"	v	file:
+sockfd_push	src/enthutech_lorawan_server.c	/^static int sockfd_push;			\/*socket for upstream from gateway *\/$/;"	v	file:
 sql_debug	src/db.c	/^static void sql_debug(sqlite3_stmt* stmt) { $/;"	f	file:
 sql_debug	src/dls_utili.c	/^static void sql_debug(sqlite3_stmt* stmt) { $/;"	f	file:
 srand1	src/utilities.c	/^void srand1( uint32_t seed )$/;"	f
@@ -679,12 +679,12 @@ string	src/parson.c	/^    char        *string;$/;"	m	union:json_value_value	file
 tail	inc/generic_list.h	/^	struct Node* tail;$/;"	m	struct:List	typeref:struct:List::Node
 tcp_bind	src/handle.c	/^void tcp_bind(const char* servaddr, const char* port, int* listenfd) {$/;"	f
 tcp_connect	src/handle.c	/^void tcp_connect(const char* servaddr, const char* port, int* sockfd, bool* exit_sig) {$/;"	f
-thread_down	src/dragino_lorawan_server.c	/^void thread_down(void) {$/;"	f
-thread_up_handle	src/dragino_lorawan_server.c	/^void thread_up_handle(void *pkt_info) {$/;"	f
+thread_down	src/enthutech_lorawan_server.c	/^void thread_down(void) {$/;"	f
+thread_up_handle	src/enthutech_lorawan_server.c	/^void thread_up_handle(void *pkt_info) {$/;"	f
 time	inc/handle.h	/^	char     time[28]; \/*UTC time of pkt RX, us precision, ISO 8601 'compact' format*\/$/;"	m	struct:metadata
 time	inc/handle.h	/^    char time[32];    \/*UTC 'system' time of the gateway, ISO 8601 'expanded' format*\/$/;"	m	struct:gwinfo
 tmst	inc/handle.h	/^	uint32_t tmst;     \/*raw time stamp*\/$/;"	m	struct:metadata
-tmst_g	src/dragino_lorawan_server.c	/^static uint32_t tmst_g;$/;"	v	file:
+tmst_g	src/enthutech_lorawan_server.c	/^static uint32_t tmst_g;$/;"	v	file:
 to	inc/handle.h	/^	int to; \/* which server to send to 1.app 2.nc 3.both 4.err 5.ignore *\/$/;"	m	struct:jsondata
 tohex	src/dls_utili.c	/^static char *tohex(char *dst, const char *src, uint8_t len) {$/;"	f	file:
 txnb	inc/handle.h	/^    uint32_t txnb;    \/*Number of packets emitted (unsigned integer)*\/$/;"	m	struct:gwinfo

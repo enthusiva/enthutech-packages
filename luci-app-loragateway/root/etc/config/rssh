@@ -2,5 +2,5 @@
 config rssh 'rssh'
 	option rssh_enable '0'
 	option host_id 'sshuser'
-	option host_addr 'ssh.support.dragino.com'
+	option host_addr 'ssh.support.enthutechaiot.com'
 

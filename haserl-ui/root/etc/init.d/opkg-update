@@ -19,7 +19,7 @@ fi
 rm /var/opkg-lists/ -rf;
 
 # spicefy repository
-echo "src/gz dragino http://repo.dragino.com/openwrt/HE/Packages/" > /etc/opkg/distfeeds.conf \
+echo "src/gz enthutech http://repo.enthutechaiot.com/openwrt/HE/Packages/" > /etc/opkg/distfeeds.conf \
 && opkg update \
 && echo "$(date +"%Y-%m-%d %H:%M")" >> $logfile \
 && echo "soure update done" >> $logfile
@@ -28,10 +28,10 @@ echo "src/gz dragino http://repo.dragino.com/openwrt/HE/Packages/" > /etc/opkg/d
 cp /etc/opkg/distfeeds.conf.bak /etc/opkg/distfeeds.conf
 
 #list upgradable package
-#package=$(opkg list-upgradable | awk '{print $1}'|grep -e dragino_gw_fwd -e haserl-ui -e  helium_gateway)
+#package=$(opkg list-upgradable | awk '{print $1}'|grep -e enthutech_gw_fwd -e haserl-ui -e  helium_gateway)
 package_ui=$(opkg list-upgradable|grep haserl-ui)
-package_fwd=$(opkg list-upgradable|grep dragino_gw_fwd)
-package_ups=$(opkg list-upgradable|grep draginoups)
+package_fwd=$(opkg list-upgradable|grep enthutech_gw_fwd)
+package_ups=$(opkg list-upgradable|grep enthutechups)
 
 #init info
 gwid="$(cat /etc/station/station.conf | grep routerid | awk -F "\"" '{print $4}')"
@@ -58,7 +58,7 @@ fi
 if [ ! -z "$package_fwd" ]; then
 	echo "================================================" >> $logfile
 	echo "$(date +"%Y-%m-%d %H:%M")" >> $logfile
-	echo "An upgradeable version of dragino_gw_fwd has been detected." >> $logfile
+	echo "An upgradeable version of enthutech_gw_fwd has been detected." >> $logfile
 	echo "Start backup the config" >> $logfile
 	tar cvpzf /tmp/fwd_backup.tar.gz  /etc/lora/local_conf.json  /etc/lora/global_conf.json /etc/station/  >> $logfile
 	if [ ! -f /tmp/fwd_backup.tar.gz ]; then
@@ -67,7 +67,7 @@ if [ ! -z "$package_fwd" ]; then
 	else
 		echo "Backuped, Start update" >> $logfile
 	fi
-	opkg install dragino_gw_fwd >> $logfile
+	opkg install enthutech_gw_fwd >> $logfile
 	echo "Start restore backup config" >> $logfile
 	tar xvpfz /tmp/fwd_backup.tar.gz -C / >> $logfile
 	echo "================================================" >> $logfile

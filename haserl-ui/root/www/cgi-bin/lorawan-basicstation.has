@@ -81,7 +81,7 @@
 			if [ -e /etc/station/cups.trust]; then
 				ttn_trust_file_status="<span class='impactOK'>CA has been installed.</span>"
 			else
-				cd /etc/station; wget https://www.dragino.com/downloads/downloads/LoRa_Gateway/LG02-OLG02/Firmware/customized_script/cups.trust
+				cd /etc/station; wget https://www.enthutechaiot.com/downloads/downloads/LoRa_Gateway/LG02-OLG02/Firmware/customized_script/cups.trust
 			fi
 		elif [ "$FORM_PALTFORM_SERVER_TYPE" == "TP" ]; then
 			if [ -e /etc/station/cups.trust]; then

@@ -164,7 +164,7 @@ start()
 	if [ $reload_iot -eq 1 ]; then
 		killall -q mosquitto_sub             # Remove any remaining MQTT subscribe process
 		killall -q inotifywait                  # Remove any inotfywait process
-		killall -q loriot_dragino_lg308_spi  # Remove any remaining LORIOT process
+		killall -q loriot_enthutech_lg308_spi  # Remove any remaining LORIOT process
 		/etc/init.d/lora_gw reload > /dev/null
 		sleep 2
 		/etc/init.d/iot reload > /dev/null

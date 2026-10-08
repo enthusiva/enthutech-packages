@@ -14,13 +14,13 @@ define Package/$(PKG_NAME)
 	SECTION:=utils
 	CATEGORY:=Utilities
 	TITLE:=$(PKG_NAME)
-	MAINTAINER:=Dragino <support@dragino.com>
+	MAINTAINER:=Enthutech <support@enthutechaiot.com>
 	DEPENDS:=+libuci +libpthread +librt
 endef
 
 define Package/$(PKG_NAME)/description
 	LoRa dual channels packet forwarder
-	For Dragino LG01/LG02
+	For Enthutech LG01/LG02
 endef
 
 CONFIGURE_VARS+= \

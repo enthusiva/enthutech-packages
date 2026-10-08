@@ -19,7 +19,7 @@ sensor_dir='/var/iot/channels'
 local socket = require('socket')
 local uci = require("luci.model.uci")
 uci = uci.cursor()
-local utility = require 'dragino.utility'
+local utility = require 'enthutech.utility'
 local luci_util = require("luci.util")
 local json = require("luci.json")
 

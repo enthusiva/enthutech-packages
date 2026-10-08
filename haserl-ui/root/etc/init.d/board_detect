@@ -22,7 +22,7 @@ start() {
 		chip="sx1302"
 		board="LG08"
 		model="LIG16"
-		pic="Dragino-LIG16.png"
+		pic="Enthutech-LIG16.png"
 		rmmod i2c-gpio-custom
 		insmod i2c-gpio-custom bus0=0,7,8
 		rmmod spi-gpio-custom
@@ -34,7 +34,7 @@ start() {
 		chip="sx1308"
 		board="LG08"
 		model="LPS8"
-		pic="Dragino-LPS8.png"
+		pic="Enthutech-LPS8.png"
 		rmmod spi-gpio-custom
 		insmod spi-gpio-custom bus0=1,24,18,20,0,8000000,19
 		;;
@@ -54,7 +54,7 @@ start() {
 				board="LG08"
 				model="DLOS8"                
 		fi
-		pic="Dragino-DLOS8.png"
+		pic="Enthutech-DLOS8.png"
 		ln -s /dev/ttyUSB0 /dev/ttyGPS
 		EC25_P2="/dev/ttyUSB3"
 		EC25_P3="/dev/ttyUSB4"
@@ -66,7 +66,7 @@ start() {
 		chip="sx1302"
 		board="LG08"
 		model="DLOS8N"
-		pic="Dragino-DLOS8.png"
+		pic="Enthutech-DLOS8.png"
 		ln -s /dev/ttyUSB0 /dev/ttyGPS
 		EC25_P2="/dev/ttyUSB3"
 		EC25_P3="/dev/ttyUSB4"
@@ -82,7 +82,7 @@ start() {
 		chip="sx1302"
 		board="LG08"
 		model="LPS8-N"
-		pic="Dragino-LPS8-N.png"
+		pic="Enthutech-LPS8-N.png"
 		EC25_P3="/dev/ttyUSB2"
 		rmmod i2c-gpio-custom
 		insmod i2c-gpio-custom bus0=0,7,8
@@ -96,7 +96,7 @@ start() {
 		chip="sx1302"
 		board="LG08"
 		model="LPS8-G"
-		pic="Dragino-LPS8-N.png"
+		pic="Enthutech-LPS8-N.png"
 		EC25_P3="/dev/ttyUSB2"
 		rmmod i2c-gpio-custom
 		insmod i2c-gpio-custom bus0=0,7,8
@@ -110,7 +110,7 @@ start() {
 		chip="sx1302"
 		board="LG08"
 		model="LG308-N"
-		pic="Dragino-LG308.png"
+		pic="Enthutech-LG308.png"
 		EC25_P2="/dev/ttyUSB2"
 		EC25_P3="/dev/ttyUSB3"
 		rmmod i2c-gpio-custom
@@ -132,7 +132,7 @@ start() {
 			board="LG02"
 			chip="sx1276_2"
 			model="LG02"
-			pic="Dragino-LG02.png"
+			pic="Enthutech-LG02.png"
 		else 
 			/usr/bin/spirw 23 1
 			if [[ "$?" == "0" ]]; then
@@ -140,7 +140,7 @@ start() {
 				board="LG01"
 				chip="sx1276_1"
 				model="LG01"
-				pic="Dragino-LG01.png"
+				pic="Enthutech-LG01.png"
 			else
 				rmmod spi-gpio-custom
 				insmod spi-gpio-custom bus0=1,24,18,20,0,8000000,19 bus1=2,22,14,26,0,8000000,21
@@ -148,7 +148,7 @@ start() {
 				if [[ "$?" == "1" ]]; then
 				chip="sx1301"
 				model="LG308"
-				pic="Dragino-LG308.png"
+				pic="Enthutech-LG308.png"
 				rmmod spi-gpio-custom
 				insmod spi-gpio-custom bus0=1,24,18,20,0,8000000,19
 					logger "[Model Detected]: LG308"

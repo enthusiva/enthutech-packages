@@ -2,7 +2,7 @@
 
 <%  echo -en "content-type: text/html\r\n\r\n"  # RF2616 Compliance %>
 
-<% loriot_sw="/usr/bin/loriot_dragino_lg308_spi" %>
+<% loriot_sw="/usr/bin/loriot_enthutech_lg308_spi" %>
 
 <%# --- Process form submission --- %>
 <%
@@ -25,9 +25,9 @@
 		uci commit gateway
 		killall -q mosquitto_sub             # Remove any remaining MQTT subscribe process
 		killall inotifywait                  # Remove any inotfywait process
-		killall -q loriot_dragino_lg308_spi  # Remove any remaining LORIOT process
+		killall -q loriot_enthutech_lg308_spi  # Remove any remaining LORIOT process
 		
-		version=$(/usr/bin/loriot_dragino_lg308_spi -h | grep "Version" | cut -d " " -f 1,2)
+		version=$(/usr/bin/loriot_enthutech_lg308_spi -h | grep "Version" | cut -d " " -f 1,2)
 		uci set loriot.loriot.version="$version"
 		uci commit loriot 
 		
@@ -37,7 +37,7 @@
 	fi
 
 	# Check if LORIOT software is installed
-	if [ -e "/usr/bin/loriot_dragino_lg308_spi" ]; then
+	if [ -e "/usr/bin/loriot_enthutech_lg308_spi" ]; then
 		installed="1"
 	else
 		installed="0"

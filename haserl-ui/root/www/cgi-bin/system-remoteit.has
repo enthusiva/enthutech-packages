@@ -22,7 +22,7 @@
 			echo "<p style='color:Red;'> Remoteit is already installed. </p>"            > /tmp/remoteit_status.txt
 			echo "<p style='color:Red;'> Please Remove then Install and Register </p>"  >> /tmp/remoteit_status.txt
 		else	
-			download_url="https://www.dragino.com/downloads/downloads/LoRa_Gateway/LPS8/Firmware/remoteit/"
+			download_url="https://www.enthutechaiot.com/downloads/downloads/LoRa_Gateway/LPS8/Firmware/remoteit/"
 			# Clean up
 			rm /etc/remoteit/config.json
 			rm /etc/remoteit/registration; touch /etc/remoteit/registration

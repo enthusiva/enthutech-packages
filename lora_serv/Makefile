@@ -1,6 +1,6 @@
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=dragino_lorawan_server
+PKG_NAME:=enthutech_lorawan_server
 PKG_VERSION:=1.0.2
 PKG_RELEASE:=1
 
@@ -14,13 +14,13 @@ define Package/$(PKG_NAME)
 	SECTION:=utils
 	CATEGORY:=Utilities
 	TITLE:=$(PKG_NAME)
-	MAINTAINER:=Dragino <support@dragino.com>
+	MAINTAINER:=Enthutech <support@enthutechaiot.com>
 	DEPENDS:=+libc +libsqlite3 +libpthread 
 endef
 
 define Package/$(PKG_NAME)/description
 	LoRaWan simple server
-	For Dragino LG01N/OLG01N/LG02/OLG02/LG308/LPS8
+	For Enthutech LG01N/OLG01N/LG02/OLG02/LG308/LPS8
 endef
 
 define Package/$(PKG_NAME)/extra_provides

@@ -82,15 +82,15 @@ start() {
 
 
 	case $model in
-		LG01) pic="Dragino-LG01.png"
+		LG01) pic="Enthutech-LG01.png"
 		;;
-		LG02) pic="Dragino-LG02.png"
+		LG02) pic="Enthutech-LG02.png"
 		;;
-		LG308)	pic="Dragino-LG308.png"
+		LG308)	pic="Enthutech-LG308.png"
 		;;
-		LPS8)	pic="Dragino-LPS8.png"
+		LPS8)	pic="Enthutech-LPS8.png"
 		;;
-		DLOS8) pic="Dragino-DLOS8.png"
+		DLOS8) pic="Enthutech-DLOS8.png"
 		;;
 	esac
 	echo $model > /tmp/iot/model.txt

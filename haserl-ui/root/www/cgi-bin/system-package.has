@@ -26,10 +26,10 @@
 	fi
 
 
-	package_info=$(opkg list_installed|grep  -e haserl-ui -e dragino_gw_fwd -e lg02_pkt_fwd -e lora-gateway)
+	package_info=$(opkg list_installed|grep  -e haserl-ui -e enthutech_gw_fwd -e lg02_pkt_fwd -e lora-gateway)
 	if [ ! -z "$package_info" ]; then
 		echo "<pre>" > /tmp/main_packages.html
-		opkg list_installed|grep  -e haserl-ui -e dragino_gw_fwd -e lg02_pkt_fwd -e lora-gateway >> /tmp/main_packages.html
+		opkg list_installed|grep  -e haserl-ui -e enthutech_gw_fwd -e lg02_pkt_fwd -e lora-gateway >> /tmp/main_packages.html
 		echo "</pre>" >> /tmp/main_packages.html
 	fi
 
@@ -96,7 +96,7 @@
 	fi
 	
 	# Process core package upgrades
-	CORE_PKG="lg02_pkt_fwd lora-gateway haserl-ui dragino_gw_fwd"
+	CORE_PKG="lg02_pkt_fwd lora-gateway haserl-ui enthutech_gw_fwd"
 	for PKG in $CORE_PKG;do
 		if [ $FORM_BUTTON == "Upgrade_$PKG" ]; then
 			upgrading="1"

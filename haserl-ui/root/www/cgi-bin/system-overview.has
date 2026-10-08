@@ -24,7 +24,7 @@ fi
 
 # Check Internet connectivity
 host1="1.1.1.1"
-host2="www.dragino.com"
+host2="www.enthutechaiot.com"
 ping -w2 $host1 1>/dev/null 2>/dev/null; SUCCESS=$?
 if [ $SUCCESS -eq "0" ]; then
   internet="1"

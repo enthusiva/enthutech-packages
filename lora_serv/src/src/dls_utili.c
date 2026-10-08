@@ -192,7 +192,7 @@ static void show_help() {
     MSG("--pfname   <string>   profile name use for add or list profile\n");
     MSG("--pfid     <int>      profile id use for add gateway\n");
     MSG("\n");
-    MSG("e.g. add a gateway:   dls_utili --addgw A840411B7C5C4150 --pfname dragino\n");
+    MSG("e.g. add a gateway:   dls_utili --addgw A840411B7C5C4150 --pfname enthutech\n");
     MSG("                      PFNAME index which profile gateway in use\n");
     MSG("     list gateways:   dls_utili --listgw, this command will print all gateways status and info\n");
     MSG("\n--------------------------------------------------------------------------------\n");
@@ -201,7 +201,7 @@ static void show_help() {
     MSG("--rx2dr    <int>      datarate: 0(SF12BW125)/1(SF11BW125)/2(SF10BW125)/3(SF9BW125)/4(SF8BW125)/5(SF7BW125)\n");
     MSG("--rx2freq  <float>    rx2 frequency used for join accept downlink\n");
     MSG("\n");
-    MSG("e.g. add a profile:   dls_utili --addpf --pfname dragino --rx2dr 5 --rx2freq 868.925\n");
+    MSG("e.g. add a profile:   dls_utili --addpf --pfname enthutech --rx2dr 5 --rx2freq 868.925\n");
     MSG("\n--------------------------------------------------------------------------------\n");
     MSG("--delete              delete by appeui/deveui/gweui/pfname/pfid\n");
     MSG("e.g.  dls_utili --delete --appeui appeui\n");
@@ -210,13 +210,13 @@ static void show_help() {
     MSG("--listapp  <string>   list all applicates info, or the app index by app name\n");
     MSG("--appname  <string>   application name use for add or list application\n");
     MSG("\n");
-    MSG("e.g. add a application: dls_utili --addapp --appname dragino\n");
+    MSG("e.g. add a application: dls_utili --addapp --appname enthutech\n");
     MSG("\n--------------------------------------------------------------------------------\n");
     MSG("--adddev              add a device return DEVEUI APPEUI and APPKEY, need to use with --appname\n");
     MSG("--mandev              add a device manually\n");
     MSG("--listdev             list all devices info, or the device index by deveui\n");
     MSG("\n");
-    MSG("e.g. add a device:    dls_utili --adddev --appname dragino\n");
+    MSG("e.g. add a device:    dls_utili --adddev --appname enthutech\n");
     MSG("\n--------------------------------------------------------------------------------\n");
     MSG("--listmsg             list all message by devaddr|deveui|gweui|appeui\n");
     MSG("--devaddr  <hex>      devaddr\n"     );
@@ -247,7 +247,7 @@ static int app_getopt(struct lw_t *cntx, int argc, char **argv) {
         }
         switch (ret) {
         case 'v':
-		    MSG("Dragino LoRaWAN Server\n");
+		    MSG("Enthutech LoRaWAN Server\n");
             MSG("%s Version: 1.0.2\n", argv[0]);
             return 0;
         case 'h':

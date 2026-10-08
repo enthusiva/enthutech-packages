@@ -41,7 +41,7 @@ LINE="<hr style=\"height:2px;border:none;border-top:2px ridge green;\" width=\"1
 	<tr><td>
 		<h4>	<% echo "Logread FWD State:  " %> 	</h4>
         <%= $LINE %>
-		<% logread -l 100 | grep "dragino.com" | grep -v server2 | awk 'BEGIN{FS="}"} {print $s, "'$FM'"}'  %>
+		<% logread -l 100 | grep "enthutechaiot.com" | grep -v server2 | awk 'BEGIN{FS="}"} {print $s, "'$FM'"}'  %>
 	</td></tr>
 
 	<tr class="rowSpacer"></tr>

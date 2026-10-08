@@ -29,7 +29,7 @@ function index()
   end
 
   local string =string
-  entry({"admin", "gateway", "dragino"}, call("dragino"), _("Dragino Menu"), 1)   
+  entry({"admin", "gateway", "enthutech"}, call("enthutech"), _("Enthutech Menu"), 1)   
 
   entry({"admin", "gateway"}, alias("admin", "gateway", "iotserver"), _("Service"), 60).index = true
 
@@ -52,11 +52,11 @@ end
 
 ------------------------------------
 function mqtt() 
-    luci.template.render("dragino/mqtt")    
+    luci.template.render("enthutech/mqtt")    
 end
 
-function dragino() 
-    luci.template.render("dragino/dragino")    
+function enthutech() 
+    luci.template.render("enthutech/enthutech")    
 end
 
 -- ----------------------------------

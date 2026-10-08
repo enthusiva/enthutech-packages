@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `gwprofile` (
 CREATE TABLE IF NOT EXISTS `gws` (
   `gweui` text PRIMARY KEY NOT NULL,
   `profileid` integer not null default 1,
-  `description` text not null default 'dragino gw',
+  `description` text not null default 'enthutech gw',
   `created_at` timestamp not null DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp DEFAULT CURRENT_TIMESTAMP,
   `first_seen_at` timestamp,

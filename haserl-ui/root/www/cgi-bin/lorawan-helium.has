@@ -19,9 +19,9 @@
 	
 	if [ "$FORM_BUTTON" == "Download gateway-rs" ]; then
 		
-		if [ ! -f "/tmp/helium-gateway-rs-dragino.ipk" ]; then
-			cd /tmp;wget -O helium-gateway-rs-dragino.ipk https://www.dragino.com/downloads/downloads/LoRa_Gateway/3rd-software/helium/gateway-rs/data-only/gateway-rs-latest.ipk
-			if [ ! -f "/tmp/helium-gateway-rs-dragino.ipk" ]; then
+		if [ ! -f "/tmp/helium-gateway-rs-enthutech.ipk" ]; then
+			cd /tmp;wget -O helium-gateway-rs-enthutech.ipk https://www.enthutechaiot.com/downloads/downloads/LoRa_Gateway/3rd-software/helium/gateway-rs/data-only/gateway-rs-latest.ipk
+			if [ ! -f "/tmp/helium-gateway-rs-enthutech.ipk" ]; then
 				Download_status="<span class="impactOK">Download failed,Please Download again.</span>"
 			else
 				Download_status="<span class="impactOK">Download successful,Please Install Helium gateway-rs.</span>"
@@ -32,7 +32,7 @@
 	fi
 
 	if [ "$FORM_BUTTON" == "Install gateway-rs" ]; then
-		if [ -f "/tmp/helium-gateway-rs-dragino.ipk" ]; then
+		if [ -f "/tmp/helium-gateway-rs-enthutech.ipk" ]; then
 			if  [ ! -e "/etc/init.d/helium_gateway" ]; then	
 				Install_status="<span class='impactOK'>Helium server has been Installed successfully </span>"
 				%>
@@ -60,7 +60,7 @@
 
 		</html>
 <%
-			opkg install /tmp/helium-gateway-rs-dragino.ipk
+			opkg install /tmp/helium-gateway-rs-enthutech.ipk
 			else
 				Install_status="<span class='impactOK'>Helium gateway-rs has been Installed</span>"
 			fi
@@ -75,11 +75,11 @@
 		if [ -z "$cur_version" ]; then
 			Upgrade_status="<span class='impact-light'>Gateway-rs not installed</span>"
 		else
-			RELEASED=$(curl  https://www.dragino.com/downloads/downloads/LoRa_Gateway/3rd-software/helium/gateway-rs/data-only/Released)
+			RELEASED=$(curl  https://www.enthutechaiot.com/downloads/downloads/LoRa_Gateway/3rd-software/helium/gateway-rs/data-only/Released)
 			rem_version=$(echo $RELEASED|awk '{print $1}')
 			rem_sha256=$(echo $RELEASED|awk '{print $2}')
 			if [ "$rem_version" \> "$cur_version" ]; then
-				wget -P /tmp https://www.dragino.com/downloads/downloads/LoRa_Gateway/3rd-software/helium/gateway-rs/data-only/gateway-rs-latest.ipk
+				wget -P /tmp https://www.enthutechaiot.com/downloads/downloads/LoRa_Gateway/3rd-software/helium/gateway-rs/data-only/gateway-rs-latest.ipk
 				if [ ! -f "/tmp/gateway-rs-latest.ipk" ]; then
 					Upgrade_status="<span class="impactOK">Download failed,Please Download again.</span>"
 				else

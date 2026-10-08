@@ -109,7 +109,7 @@ upload_data="{
 }"
 
 # Publish the data using MQTT
-mosquitto_pub -h $SERVER -p 8883 -t dragino/gateway/status/$HOSTNAME -m "$upload_data" --cafile $Cafile
+mosquitto_pub -h $SERVER -p 8883 -t enthutech/gateway/status/$HOSTNAME -m "$upload_data" --cafile $Cafile
 
 # Print the data for debugging purposes
 #echo "$upload_data"

@@ -10,7 +10,7 @@ cfg_path="/mnt/${mountpoint}"
 GWID=`xxd -ps -l 6 -s 0x1002 /dev/mtd6`
 CFG="$GWID.json"
 
-IMAGE="dragino-lgw-squashfs-sysupgrade.bin"
+IMAGE="enthutech-lgw-squashfs-sysupgrade.bin"
 
 cfg_version=""
 cfg_server=""

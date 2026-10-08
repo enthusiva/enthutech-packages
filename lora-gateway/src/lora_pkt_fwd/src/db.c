@@ -6,7 +6,7 @@
   |____/|_| \_\/_/   \_\____|___|_| \_|\___/ 
 
 Description:
-    dragino-fwd, sqlite3 db.c
+    enthutech-fwd, sqlite3 db.c
 
 License: Revised BSD License, see LICENSE.TXT file include in the project
 

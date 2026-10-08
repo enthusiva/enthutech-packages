@@ -32,7 +32,7 @@ gen_gw_cfg() {
         json_init
         json_add_object gateway_conf
         json_add_string "platform" "SX1$chip"
-        json_add_string "description" "Dragino LoRaWAN Gateway"
+        json_add_string "description" "Enthutech LoRaWAN Gateway"
         json_add_string "email" "$email"
         json_add_string "gateway_ID" "$gwid" 
         json_add_string "regional" "$def_cfg" 

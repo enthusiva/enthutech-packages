@@ -4,8 +4,8 @@
 HOSTNAME=$(uci get system.@system[0].hostname)
 Gateway_EUI=$(uci -q get gateway.general.GWID)
 BROKER="lns1.thingseye.io"
-SUB_TOPIC="dragino/gateway/down/$HOSTNAME"
-PUB_TOPIC="dragino/gateway/status/$HOSTNAME"
+SUB_TOPIC="enthutech/gateway/down/$HOSTNAME"
+PUB_TOPIC="enthutech/gateway/status/$HOSTNAME"
 PORT=8883
 CAFILE='/tmp/ca.pem' # Certificate path
 MAC=$(hexdump -v -s $((0x1000)) -n 10 /dev/mtd6 | awk '{print $3 $4 $5}')
@@ -30,12 +30,12 @@ mosquitto_sub -h $BROKER -p $PORT -t $SUB_TOPIC --cafile $CAFILE | while read -r
                 mosquitto_pub -h $BROKER -p $PORT -t $PUB_TOPIC --cafile $CAFILE -m "$ack_data"
                 ;;
             "package_info")
-                dragino_gw_fwd_version=$(opkg list_installed | grep -e 'dragino_gw_fwd' | awk '{print $3}')
+                enthutech_gw_fwd_version=$(opkg list_installed | grep -e 'enthutech_gw_fwd' | awk '{print $3}')
                 haserl_ui_version=$(opkg list_installed | grep -e 'haserl-ui' | awk '{print $3}')
                 lg02_pkt_fwd_version=$(opkg list_installed | grep -e 'lg02_pkt_fwd' | awk '{print $3}')
                 lora_gateway_version=$(opkg list_installed | grep -e 'lora-gateway' | awk '{print $3}')
 
-                upload_data="{\"Hostname\":\"$HOSTNAME\",\"Gateway_EUI\":\"$Gateway_EUI\",\"dragino_gw_fwd\":\"$dragino_gw_fwd_version\",\"haserl_ui\":\"$haserl_ui_version\",\"lg02_pkt_fwd\":\"$lg02_pkt_fwd_version\",\"lora_gateway\":\"$lora_gateway_version\"}"
+                upload_data="{\"Hostname\":\"$HOSTNAME\",\"Gateway_EUI\":\"$Gateway_EUI\",\"enthutech_gw_fwd\":\"$enthutech_gw_fwd_version\",\"haserl_ui\":\"$haserl_ui_version\",\"lg02_pkt_fwd\":\"$lg02_pkt_fwd_version\",\"lora_gateway\":\"$lora_gateway_version\"}"
                 mosquitto_pub -h $BROKER -p $PORT -t $PUB_TOPIC --cafile $CAFILE -m "$upload_data"
                 /usr/bin/monitor_gateway.sh
                 ;;
@@ -84,7 +84,7 @@ mosquitto_sub -h $BROKER -p $PORT -t $SUB_TOPIC --cafile $CAFILE | while read -r
                 killall logread
 
                 # Upload the log file
-                curl -u "$MAC:dragino" -X PUT --upload-file /tmp/logfile.log "https://lns1.thingseye.io/upload/$MAC/logfile.log"
+                curl -u "$MAC:enthutech" -X PUT --upload-file /tmp/logfile.log "https://lns1.thingseye.io/upload/$MAC/logfile.log"
                 mosquitto_pub -h $BROKER -p $PORT -t $PUB_TOPIC --cafile $CAFILE -m "$ack_log"
                 ;;
             *)

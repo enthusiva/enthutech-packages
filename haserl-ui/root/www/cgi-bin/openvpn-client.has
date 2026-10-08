@@ -51,7 +51,7 @@ if [ "$FORM_BUTTON" == "Stop" ]; then
 fi
 
 if [ "$FORM_BUTTON" == "Install OpenVPN" ]; then
-	wget -P /tmp http://repo.dragino.com/release/openwrt-package/packages/openvpn-openssl_2.4.5-3_mips_24kc.ipk http://repo.dragino.com/release/openwrt-package/packages/liblzo_2.10-1_mips_24kc.ipk
+	wget -P /tmp http://repo.enthutechaiot.com/release/openwrt-package/packages/openvpn-openssl_2.4.5-3_mips_24kc.ipk http://repo.enthutechaiot.com/release/openwrt-package/packages/liblzo_2.10-1_mips_24kc.ipk
 	opkg install /tmp/liblzo_2.10-1_mips_24kc.ipk /tmp/openvpn-openssl_2.4.5-3_mips_24kc.ipk
 	reboot
 fi

@@ -118,7 +118,7 @@ Index: mosquitto-1.6.4/client/sub_client.c
  #endif
 +#ifdef LORA_PUSH
 +	printf("\nSettings for transfer the subscribe message via the lora radio.\n\n");
-+	printf(" -z : If set, enables dragino lora push for mqtt subscribe.\n");
++	printf(" -z : If set, enables enthutech lora push for mqtt subscribe.\n");
 +	printf(" --ipol : If set, set the inverIQ true.\n");
 +	printf(" --freq <float>: set the target frequency for push in MHz.\n");
 +	printf(" --datr <string>: set the datarate for push such as SF7BW125.\n");

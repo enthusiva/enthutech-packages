@@ -4,7 +4,7 @@
 
 <%
 	# Default Host Addr and ID
-	default_host_addr="support.dragino.com"
+	default_host_addr="support.enthutechaiot.com"
 	default_host_id="rsshuser"
 
 	# Calculate port no. from rsshid
